@@ -44,6 +44,9 @@ res.render(
     );
 
 });
+/*****************
+ * Payment status*
+ *****************/
 app.post('/purchase', (req,res) =>{
     payment_id =  req.body;
     console.log("**********Payment authorized***********");
@@ -51,13 +54,15 @@ app.post('/purchase', (req,res) =>{
     console.log("**********Payment authorized***********");
     instance.payments.fetch(payment_id.razorpay_payment_id).then((response) => {
     console.log("**********Payment instance***********");
-    //console.log(response); 
+    console.log(response); 
+    console.log("**********Payment instance***********")
     instance.payments.capture(payment_id.razorpay_payment_id, response.amount).then((response) => {
     res.send(response);
 }).catch((error) => {
   console.log(error);
 });
-    console.log("**********Payment instance***********")
+
+
 }).catch((error) => {
   console.log(error);
 });
