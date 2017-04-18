@@ -1,0 +1,17 @@
+<form action="/purchase" method="POST">
+<!-- Note that the amount is in paise = 50 INR -->
+<script
+    src="https://checkout.razorpay.com/v1/checkout.js"
+    data-key="rzp_test_ZhHxIMoMDhF3oW"
+    data-amount={{amount}}
+    data-buttontext="Pay with Razorpay"
+    data-name="cash"
+    data-description="Purchase Description"
+    data-image="https://your-awesome-site.com/your_logo.jpg"
+    data-prefill.name="saikat chakrabortty"
+    data-prefill.email="support@razorpay.com"
+    data-theme.color="#F37254"
+    data-order_id = {{order_id}}
+></script>
+<input type="hidden" value="Hidden Element" name="hidden">
+</form>
