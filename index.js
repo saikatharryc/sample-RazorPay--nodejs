@@ -49,11 +49,11 @@ app.post('/purchase', (req,res) =>{
     console.log("**********Payment authorized***********")
     console.log(payment_id);
     console.log("**********Payment authorized***********")
-// instance.payments.capture(payment_id.razorpay_payment_id, amount).then((response) => {
-//     res.send(response);
-// }).catch((error) => {
-//   console.log(error);
-// });
+instance.payments.capture(payment_id.razorpay_payment_id, amount).then((response) => {
+    res.send(response);
+}).catch((error) => {
+  console.log(error);
+});
 })
 
 app.listen(3000, () => {
