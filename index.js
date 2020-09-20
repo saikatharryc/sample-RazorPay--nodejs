@@ -4,8 +4,8 @@ var swig = require('swig');
 var bodyParser = require('body-parser');
 var Razorpay = require('razorpay');
 var instance = new Razorpay({
-  key_id: 'rzp_test_ZhHxIMoMDhF3oW',
-  key_secret: 'y3TURMeqnU1tZbQb1lXHnZi8'
+  key_id: '',
+  key_secret: ''
 })
 // these line is important. Include it before setting up the webhook handler.
 app.use(bodyParser.urlencoded({ extended: true }))
